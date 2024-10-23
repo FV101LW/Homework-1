@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <iomanip>
 using namespace std;
 
 void print(const vector<int>& arr) {
-  stack<int> stk;
+  stack<int> s;
   vector<int> nge (arr.size(), -1);
 
   for (int i = 0; i < arr.size(); ++i) {
@@ -14,14 +15,14 @@ void print(const vector<int>& arr) {
     }
     s.push(i);
   }
-cout << "Next Greater Elements: " << endl;
-  for (const auto& element : nge) {
-    cout << element << " ";
+cout << "Output: " << endl;
+  for (size_t i = 0; i < arr.size(); ++i) {
+    cout << setw(6) << arr[i] << " --> " << nge[i] << endl;
   }
   cout << endl; 
 }
 
-main () {
+int main () {
   vector<int> arr = {4, 5, 2, 25};
   print(arr);
   return 0;
