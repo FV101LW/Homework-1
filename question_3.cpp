@@ -42,7 +42,6 @@ for (int neg : results) {
 }
 
 
-
 int main() {
  vector <int> arr = {-8, 2, 3, -6, 10};
    int k = 2;
